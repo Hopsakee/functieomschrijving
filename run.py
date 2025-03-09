@@ -254,7 +254,7 @@ config = ChatAppConfig(
 def main():
     from gradiochat.ui import create_chat_app
     app = create_chat_app(config)
-    app.build_interface().launch(share=True)
+    app.build_interface().launch(share=True, pwa=True)
 
 if __name__ == "__main__":
     main()
