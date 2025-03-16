@@ -230,7 +230,7 @@ Deze gecategoriseerde takenlijst biedt een gestructureerd overzicht van de werkz
 
 # Create model configuration
 model_config = ModelConfig(
-    model_name="meta-llama/Llama-3.1-70B-Instruct-Turbo-Free", #"Qwen/QwQ-32B", #"mistralai/Mistral-7B-Instruct-v0.2",
+    model_name="meta-llama/Llama-3.3-70B-Instruct-Turbo-Free", #"Qwen/QwQ-32B", #"mistralai/Mistral-7B-Instruct-v0.2",
     provider="togetherai",
     api_key_env_var="TG_API_KEY",
     max_tokens=6048,
