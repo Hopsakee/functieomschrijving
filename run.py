@@ -230,16 +230,16 @@ Deze gecategoriseerde takenlijst biedt een gestructureerd overzicht van de werkz
 
 # Create model configuration
 model_config = ModelConfig(
-    model_name="Qwen/Qwen2.5-72B-Instruct", #"Qwen/QwQ-32B", #"mistralai/Mistral-7B-Instruct-v0.2",
-    provider="huggingface",
-    api_key_env_var="HF_API_KEY",
+    model_name="meta-llama/Llama-3.1-70B-Instruct-Turbo-Free", #"Qwen/QwQ-32B", #"mistralai/Mistral-7B-Instruct-v0.2",
+    provider="togetherai",
+    api_key_env_var="TG_API_KEY",
     max_tokens=6048,
     temperature=0.6
 )
 
 # Create chat application configuration
 config = ChatAppConfig(
-    app_name="Python Expert",
+    app_name="Functieomschrijving Verbetering",
     description="Help medewerkers van Waterschap Drents Overijsselse Delta met het verbeteren van functieomschrijvingen",
     system_prompt=system_prompt,
     starter_prompt="Kun je me helpen om mijn functieomschrijving aantrekkelijker leesbaar, completer en beter vindbaar te maken?",
@@ -254,7 +254,7 @@ config = ChatAppConfig(
 def main():
     from gradiochat.ui import create_chat_app
     app = create_chat_app(config)
-    app.build_interface().launch(share=True, pwa=True)
+    app.build_interface().launch(pwa=True)
 
 if __name__ == "__main__":
     main()
